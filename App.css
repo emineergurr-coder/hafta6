@@ -1,0 +1,189 @@
+/* Genel Stil Tanımlamaları */
+:root {
+  --primary-color: #2e7d32;
+  --secondary-color: #4caf50;
+  --background-color: #f4f6f8;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+  --border-color: #e0e0e0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header ve Navigasyon */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+nav a:hover, nav a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Ana İçerik Düzeni */
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Filtreleme ve Arama Alanı */
+.filter-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 2rem;
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.filter-section input, .filter-section select {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.filter-section input {
+  flex: 1;
+}
+
+/* Etkinlik Listesi ve Kartlar */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  padding: 1.2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-card h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.event-card .category {
+  display: inline-block;
+  background-color: #e8f5e9;
+  color: var(--primary-color);
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.event-card .details {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Form Alanları (Ekle / Güncelle) */
+.form-container {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* JSON / Konsol Çıktı Kutusu */
+.json-output {
+  background-color: #1e1e1e;
+  color: #4ec9b0;
+  padding: 1rem;
+  border-radius: 6px;
+  font-family: monospace;
+  margin-top: 1.5rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #777;
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 3rem;
+}
